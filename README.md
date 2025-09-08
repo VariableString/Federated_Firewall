@@ -6,7 +6,7 @@ Federated Firewall is a network security monitoring and control tool designed fo
 
 ## 🏗️ System Architecture
 <p align="center">
-  <img src="System_Architecture_Diagram.png" alt="System Architecture Diagram" width="800"/>
+  <img src="assets/system_architecture.png" alt="System Architecture Diagram" width="800"/>
 </p>
 
 ---
