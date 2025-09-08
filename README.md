@@ -1,6 +1,6 @@
 # Federated Firewall
 
-Federated Firewall is a network security monitoring and control tool designed for experimental environments (e.g., **Mininet**). It provides a **graphical dashboard** (`gui_app.py`) that runs alongside the backend (`src/main_simple.py`) and parses logs in real time for enhanced system visibility.
+Federated Firewall is a network security monitoring and control tool designed for experimental environments (SDN like, **Mininet defined**). It provides a **graphical dashboard** (`gui_app.py`) that runs alongside the backend (`src/main_simple.py`) and parses logs in real time for enhanced system visibility.
 
 ---
 
