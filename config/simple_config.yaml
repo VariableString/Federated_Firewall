@@ -1,0 +1,58 @@
+system:
+  log_level: INFO
+  debug_mode: false
+  
+mininet:
+  num_clients: 3
+  controller_port: 6633
+  switch_protocol: OpenFlow13
+  
+phases:
+  learning_rounds: 8        # Increased for better convergence
+  testing_rounds: 4         # Increased for better evaluation
+  learning_duration: 45     # Optimized duration
+  testing_duration: 30      # Balanced testing time
+  
+federated:
+  local_epochs: 4           # Increased for better local training
+  batch_size: 32            # Optimized batch size
+  min_batch_size: 8         # Increased minimum for stability
+  aggregation_interval: 20  # More frequent aggregation
+  
+hyperparameters:
+  learning_rates: [0.005, 0.002]    # Better initial rates
+  hidden_sizes: [128, 64]           # Larger network for better capacity
+  dropout_rates: [0.1, 0.2]         # Conservative dropout
+  
+  tuning:
+    enabled: true
+    adaptation_interval: 90          # More frequent adaptation
+    learning_rate_bounds: [0.0001, 0.02]  # Tighter bounds
+    dropout_bounds: [0.05, 0.35]     # Better bounds
+    batch_size_bounds: [8, 64]       # Reasonable range
+    performance_window: 3             # Faster response to changes
+    
+model:
+  input_size: 10
+  output_size: 2
+  
+security:
+  threat_threshold: 0.6      # Balanced threshold
+  block_threshold: 0.75      # Higher confidence required for blocking
+  enable_logging: true
+  
+  adaptive_thresholds:
+    enabled: true
+    learning_phase_multiplier: 0.9   # Slightly more sensitive during learning
+    testing_phase_multiplier: 1.05   # Less sensitive during testing
+    
+firewall:
+  enable_blocking: true
+  whitelist_ips: []
+  blacklist_ports: [4444, 6666, 1234, 31337, 8080, 9999, 1337]
+  max_blocked_ips: 100       # Increased capacity
+  
+  adaptation:
+    dynamic_thresholds: true
+    threat_history_window: 150       # Larger window for better analysis
+    false_positive_threshold: 0.08   # Lower tolerance for false positives
